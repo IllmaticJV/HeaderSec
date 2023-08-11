@@ -49,7 +49,3 @@ python HeaderSec.py -u <URL> -o <path/to/output.txt>
 - **Green**: Header is configured correctly.
 - **Yellow**: Header is present but should be checked manually.
 - **Red**: Header is missing.
-
-## Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues](<link-to-issues-page>) page if you want to contribute.
