@@ -20,6 +20,7 @@
 3. Install the required packages using the provided `requirements.txt` file:
   ```bash
   git clone https://github.com/IllmaticJV/HeaderSec
+  cd HeaderSec
   pip install -r requirements.txt
   ```
 
