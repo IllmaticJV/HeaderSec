@@ -2,7 +2,7 @@
 
 ## Introduction
 
-`HeaderSec` is a command-line tool designed to analyze HTTP Security Response Headers. It evaluates the headers against recommended values to highlight potential security improvements. `HeaderSec` supports the inspection of both HTTP and HTTPS headers and can process individual URLs or multiple URLs from a file.
+`HeaderSec` is a command-line tool designed to analyze HTTP Security Response Headers. It evaluates the headers against recommended values to highlight potential security improvements. `HeaderSec` supports the inspection of both HTTP and HTTPS headers and can process individual URLs or multiple URLs from a file. The included recommended values are based on the OWASP Secure Header Project.
 
 ## Features
 
