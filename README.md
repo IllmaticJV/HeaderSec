@@ -29,19 +29,19 @@
 ### Analyze a Single URL
 
 ```bash
-python HeaderSec.py -u <URL>
+python3 HeaderSec.py -u <URL>
 ```
 
 ### Analyze Multiple URLs from a File
 
 ```bash
-python HeaderSec.py -f <path/to/file.txt>
+python3 HeaderSec.py -f <path/to/file.txt>
 ```
 
 ### Save Output to a File
 
 ```bash
-python HeaderSec.py -u <URL> -o <path/to/output.txt>
+python3 HeaderSec.py -u <URL> -o <path/to/output.txt>
 ```
 
 ## Legend
