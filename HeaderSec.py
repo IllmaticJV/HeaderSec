@@ -8,6 +8,9 @@ from concurrent.futures import ThreadPoolExecutor
 from collections import Counter
 from prettytable import PrettyTable
 from textwrap import fill
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 
 def print_legend():
     print(colored("Legend:", 'cyan'))
