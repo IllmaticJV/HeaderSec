@@ -22,7 +22,7 @@ def analyze_header(url, scheme):
     full_url = f"{scheme}://{url}" if not urlparse(url).scheme else url
 
     try:
-        response = requests.get(full_url, timeout=10)
+        response = requests.get(full_url, timeout=10, verify=False)
     except requests.exceptions.RequestException as e:
         error_message = f"Failed to retrieve {full_url}."
         return None, colored(error_message, 'red')
