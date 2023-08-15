@@ -58,10 +58,9 @@ def analyze_headers(url):
         if headers is None:
             continue
 
-
         table = PrettyTable()
         table.field_names = ["HEADER Name", "Configured Value", "Recommended Value"]
-
+        table.min_width = 20
 
         recommended_headers = {
             'Permissions-Policy': 'accelerometer=(),ambient-light-sensor=(),autoplay=(),battery=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),screen-wake-lock=(),web-share=(),xr-spatial-tracking=()',
@@ -81,11 +80,11 @@ def analyze_headers(url):
         for header, proposed_value in recommended_headers.items():
             actual_value = headers.get(header)
             if actual_value is None:
-                row = [colored(header, 'red'), colored("MISSING", 'red'), fill(proposed_value, width=90)]
+                row = [colored(header, 'red'), colored("MISSING", 'red'), fill(proposed_value, width=70)]
             elif compare_values(actual_value, proposed_value):
-                row = [colored(header, 'green'), fill(actual_value, width=90), fill(proposed_value, width=90)]
+                row = [colored(header, 'green'), fill(actual_value, width=70), fill(proposed_value, width=70)]
             else:
-                row = [colored(header, 'yellow'), fill(actual_value, width=90), fill(proposed_value, width=90)]
+                row = [colored(header, 'yellow'), fill(actual_value, width=70), fill(proposed_value, width=70)]
             table.add_row(row)
 
         output_results.append(table.get_string())
